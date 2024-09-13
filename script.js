@@ -41,7 +41,9 @@ function play(userMove) {
         else if (computerMove === 'scissors') {
             result = `computer picked ${computerMove}, you picked ${userMove}, you win`
         }
-    } else if (userMove === 'paper') {
+    } 
+    
+    else if (userMove === 'paper') {
 
         if (computerMove === 'rock') {
             result = `computer picked ${computerMove}, you picked ${userMove}, you win`
@@ -54,8 +56,9 @@ function play(userMove) {
         else if (computerMove === 'scissors') {
             result = `computer picked ${computerMove}, you picked ${userMove}, you lose`
         }
+    } 
 
-    } else if (userMove === 'scissors') {
+    else if (userMove === 'scissors') {
 
         if (computerMove === 'rock') {
             result = `computer picked ${computerMove}, you picked ${userMove}, you lose`
@@ -70,13 +73,16 @@ function play(userMove) {
         }
     }
 
-    alert(`${result}
-Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
-}
-if (result.includes('win')) {
-    score.wins += 1;
-} else if (result.includes('lose')) {
-    score.losses += 1;
-} else if (result.includes('tie')) {
-    score.ties += 1;
+        alert(`${result}
+        Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+
+        if (result.includes('win')) {
+            score.wins += 1;
+        } 
+        else if (result.includes('lose')) {
+            score.losses += 1;
+        } 
+        else if (result.includes('tie')) {
+            score.ties += 1;
+        }
 }
