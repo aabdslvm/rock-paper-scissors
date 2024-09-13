@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>practice</title>
+      <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <p>rock paper scissors</p>
+
+        <div class="inContainer">
+            <button class="rock" onclick=" 
+
+        computerPlay();
+
+        play('rock');
+
+        ">rock</button>
+
+        <button class="paper" onclick=" 
+
+        computerPlay();
+
+        play('paper');
+
+        ">paper</button>
+
+        <button class="scissors" onclick=" 
+ 
+        computerPlay();
+
+        play('scissors')
+
+        ">scissors</button>
+        </div>
+        <button class="reset" onclick="
+
+            score.wins *= 0;
+            score.ties *= 0;
+            score.losses *= 0;
+            
+            alert(`score reseted, Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`)
+        ">reset score</button>
+
+        </div>
+      <script src="script.js"></script>
+    </body>
+</html>
