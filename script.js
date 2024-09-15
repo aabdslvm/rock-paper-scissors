@@ -2,11 +2,11 @@ let computerMove = '';
 
 let result = '';
 
-let score = {
+let score = JSON.parse(localStorage.getItem('score')) || {
     wins: 0,
     losses: 0,
     ties: 0
-} || JSON.parse(localStorage.getItem('score'));
+};
 
 function computerPlay() {
     const randomNumber = Math.random();
