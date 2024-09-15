@@ -6,7 +6,7 @@ let score = {
     wins: 0,
     losses: 0,
     ties: 0
-}
+} || JSON.parse(localStorage.getItem('score'));
 
 function computerPlay() {
     const randomNumber = Math.random();
@@ -76,17 +76,19 @@ function play(userMove) {
         scoreUpdate();
     }
 
-        alert(`${result}
-        Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+    localStorage.setItem('score', JSON.stringify(score));
+
+    alert(`${result}
+    Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
 }
-function scoreUpdate() {
-    if (result.includes('win')) {
-        score.wins += 1;
-    } 
-    else if (result.includes('lose')) {
-        score.losses += 1;
-    } 
-    else if (result.includes('tie')) {
-        score.ties += 1;
+    function scoreUpdate() {
+        if (result.includes('win')) {
+            score.wins += 1;
+        } 
+        else if (result.includes('lose')) {
+            score.losses += 1;
+        } 
+        else if (result.includes('tie')) {
+            score.ties += 1;
+        }
     }
-}
